@@ -1,0 +1,104 @@
+@import '_reset';
+
+html {
+  font-size: $font-base;
+}
+
+body {
+  font-family: $font, sans-serif;
+  font-weight: 400;
+  background: #232323;
+}
+
+main {
+  overflow: hidden;
+  position: relative;
+}
+
+header {
+  background: #2d2d2d;
+  text-align: center;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.codee {
+  color: #fff;
+  font-size: rem(20);
+  font-family: $codee;
+  font-weight: normal;
+  font-style: normal;
+  span, b {
+    color: $mars;
+  }
+}
+
+h1 {
+  font-size: rem(64);
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  &.codee {
+    font-size: rem(64);
+    margin: auto;
+  }
+}
+
+h2 {
+  font-size: rem(40);
+  color: $mars;
+  text-align: center;
+  font-weight: 700;
+  font: $font;
+}
+
+#logo {
+  font-family: $codee;
+  color: #fff;
+  text-align: center;
+  font-size: 40px;
+}
+
+section {
+  padding: 60px 0;
+}
+
+.wrap {
+  margin: 0 auto;
+  width: $pageWidth;
+  max-width: 94%;
+  position: relative;
+}
+
+.top-block {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  &:after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.75);
+    z-index: 0;
+  }
+  .wrap {
+    display: flex;
+    height: 100vh;
+  }
+}
+
+.about {
+  background: linear-gradient(120deg,$mars 25%,#232323 85%);
+}
+
+footer {
+  text-align: center;
+  padding: 10px;
+}
