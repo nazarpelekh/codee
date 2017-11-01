@@ -27,7 +27,6 @@ header {
 
 .codee {
   color: #fff;
-  font-size: rem(20);
   font-family: $codee;
   font-weight: normal;
   font-style: normal;
@@ -41,10 +40,6 @@ h1 {
   text-align: center;
   position: relative;
   z-index: 1;
-  &.codee {
-    font-size: rem(64);
-    margin: auto;
-  }
 }
 
 h2 {
@@ -53,17 +48,18 @@ h2 {
   text-align: center;
   font-weight: 700;
   font: $font;
+  padding-bottom: rem(30);
 }
 
 #logo {
   font-family: $codee;
   color: #fff;
   text-align: center;
-  font-size: 40px;
+  font-size: 32px;
 }
 
 section {
-  padding: 60px 0;
+  padding: 100px 0;
 }
 
 .wrap {
@@ -71,6 +67,44 @@ section {
   width: $pageWidth;
   max-width: 94%;
   position: relative;
+  z-index: 1;
+}
+
+.button {
+  display: block;
+  padding: 10px 20px;
+  border: 2px solid #f7f7f7;
+  text-align: center;
+  text-transform: uppercase;
+  position: relative;
+  overflow:hidden;
+  transition: .3s;
+  cursor: pointer;
+  background: transparent;
+  color: #f7f7f7;
+  min-width: 150px;
+  margin: 20px auto 0;
+  font-size: rem(18);
+  &:after {
+    position: absolute;
+    transition: .3s;
+    content: '';
+    width: 0;
+    bottom: 0;
+    background: #f7f7f7;
+    height: 100%;
+    left: -10%;
+    transform: skewX(15deg);
+    z-index: -1;
+  }
+  &:hover {
+    cursor: pointer;
+    color: $mars;
+    &:after {
+      left: -10%;
+      width: 120%;
+    }
+  }
 }
 
 .top-block {
@@ -78,6 +112,8 @@ section {
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
+  height: 100vh;
+  display: flex;
   &:after {
     content: '';
     position: absolute;
@@ -89,16 +125,28 @@ section {
     z-index: 0;
   }
   .wrap {
-    display: flex;
-    height: 100vh;
+    margin: auto;
   }
 }
 
-.about {
+.contact-us {
   background: linear-gradient(120deg,$mars 25%,#232323 85%);
+  .wrap {
+    width: 600px;
+  }
+  h2 {
+    color: #fff;
+  }
+}
+.contact-us__items {
+  display: flex;
+  justify-content: space-between;
+  .item {
+    flex-basis: 48%;
+  }
 }
 
 footer {
   text-align: center;
-  padding: 10px;
+  padding: 20px;
 }

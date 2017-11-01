@@ -360,6 +360,7 @@ input::-moz-placeholder, textarea::-moz-placeholder {
 }
 
 input, textarea {
+  font-family: 'Gotham Pro';
   @include placeholder {
     color: #999;
     opacity: 1;
@@ -372,16 +373,9 @@ input:not([type='submit']) {
 
   @include placeholder {
     color: #aaa;
-    line-height: 15px;
+    line-height: 45px;
     @include transition();
 
-  }
-
-  &:focus {
-    @include placeholder {
-      line-height: 50px;
-    }
-    background: #f1f1f1;
   }
 }
 
@@ -721,7 +715,7 @@ $menu_color: #fff;
 div.wpcf7 {
   .wpcf7-form-control-wrap {
     display: block !important;
-    margin-bottom: 20px;
+    //margin-bottom: 20px;
     clear: both;
   }
   .wpcf7-not-valid-tip {
@@ -735,7 +729,7 @@ div.wpcf7 {
     cursor: pointer;
     font-family: $font;
     height: 100%;
-    line-height: 30px;
+    line-height: 45px;
     padding: 0 10px;
   }
   .wpcf7-response-output {
@@ -764,14 +758,16 @@ div.wpcf7 {
   }
   input:not([type="submit"]), textarea {
     width: 100%;
-    border: 1px solid #086195;
+    border: none;
+    border-bottom: 2px solid #f7f7f7;
     padding: 0 12px;
     display: block;
-    height: 49px;
-    @include border-radius(5px);
+    height: 45px;
     margin: 0 auto 20px;
     font: 400 16px $font;
-    @include placeholder {color: #999;}
+    background: transparent;
+    color: #fff;
+    @include placeholder {color: #e9e9e9;}
     &:focus {
       background: rgba(8, 97, 149, 0.08);
     }
