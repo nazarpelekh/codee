@@ -6,7 +6,7 @@
     </section>
     <section class="contact-us">
         <div class="wrap">
-            <h2><?php _e("<!--:en-->Contact with us<!--:--><!--:ua-->Зв'яжіться з нами<!--:-->"); ?></h2>
+            <h2><?php _e("[:en]Get in touch[:ua]Зв'яжіться з нами[:]"); ?></h2>
 	        <?php echo do_shortcode('[contact-form-7 id="5" title="Contact form"]') ?>
         </div>
     </section>

@@ -1,47 +1,3 @@
-@font-face {
-  font-family: "JosefinSans";
-  src: url("../fonts/JosefinSans-Regular.eot");
-  src: url("../fonts/JosefinSans-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/JosefinSans-Regular.woff") format("woff"), url("../fonts/JosefinSans-Regular.ttf") format("truetype"), url("../fonts/JosefinSans-Regular.svg#JosefinSans") format("svg");
-  font-weight: 400;
-  font-style: normal; }
-@font-face {
-  font-family: "Gotham";
-  src: url("../fonts/GothamPro-Light.eot");
-  src: url("../fonts/GothamPro-Light.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro-Light.woff") format("woff"), url("../fonts/GothamPro-Light.ttf") format("truetype"), url("../fonts/GothamPro-Light.svg#Gotham") format("svg");
-  font-weight: 300;
-  font-style: normal; }
-@font-face {
-  font-family: "Gotham";
-  src: url("../fonts/GothamPro-Regular.eot");
-  src: url("../fonts/GothamPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro-Regular.woff") format("woff"), url("../fonts/GothamPro-Regular.ttf") format("truetype"), url("../fonts/GothamPro-Regular.svg#Gotham") format("svg");
-  font-weight: 400;
-  font-style: normal; }
-@font-face {
-  font-family: "Gotham";
-  src: url("../fonts/GothamPro-Regular.eot");
-  src: url("../fonts/GothamPro-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro-Regular.woff") format("woff"), url("../fonts/GothamPro-Regular.ttf") format("truetype"), url("../fonts/GothamPro-Regular.svg#Gotham") format("svg");
-  font-weight: 400;
-  font-style: normal; }
-@font-face {
-  font-family: "Gotham";
-  src: url("../fonts/GothamPro-Medium.eot");
-  src: url("../fonts/GothamPro-Medium.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro-Medium.woff") format("woff"), url("../fonts/GothamPro-Medium.ttf") format("truetype"), url("../fonts/GothamPro-Medium.svg#Gotham") format("svg");
-  font-weight: 500;
-  font-style: normal; }
-@font-face {
-  font-family: "Gotham";
-  src: url("../fonts/GothamPro-Bold.eot");
-  src: url("../fonts/GothamPro-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro-Bold.woff") format("woff"), url("../fonts/GothamPro-Bold.ttf") format("truetype"), url("../fonts/GothamPro-Bold.svg#Gotham") format("svg");
-  font-weight: 700;
-  font-style: normal; }
-@font-face {
-  font-family: "Gotham";
-  src: url("../fonts/GothamPro-Black.eot");
-  src: url("../fonts/GothamPro-Black.eot?#iefix") format("embedded-opentype"), url("../fonts/GothamPro-Black.woff") format("woff"), url("../fonts/GothamPro-Black.ttf") format("truetype"), url("../fonts/GothamPro-Black.svg#Gotham") format("svg");
-  font-weight: 900;
-  font-style: normal; }
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  /* Using @include svg-font-face('FontName', 'font-filename', 400); */ }
 * {
   margin: 0;
   padding: 0;
@@ -358,7 +314,7 @@ div.wpcf7 .wpcf7-not-valid-tip {
   left: 0;
   right: 0;
   cursor: pointer;
-  font-family: "GothamPro";
+  font-family: "Gotham Pro";
   height: 100%;
   line-height: 45px;
   padding: 0 10px; }
@@ -366,7 +322,7 @@ div.wpcf7 .wpcf7-response-output {
   float: left;
   width: 100%;
   margin: 10px 0 0 0;
-  font-family: "GothamPro";
+  font-family: "Gotham Pro";
   line-height: 20px;
   padding: 5px 20px;
   text-align: center; }
@@ -389,7 +345,7 @@ div.wpcf7 input:not([type="submit"]), div.wpcf7 textarea {
   display: block;
   height: 45px;
   margin: 0 auto 20px;
-  font: 400 16px "GothamPro";
+  font: 400 16px "Gotham Pro";
   background: transparent;
   color: #fff; }
   div.wpcf7 input:not([type="submit"])::-webkit-input-placeholder, div.wpcf7 textarea::-webkit-input-placeholder {
@@ -412,7 +368,7 @@ html {
   font-size: 20px; }
 
 body {
-  font-family: "GothamPro", sans-serif;
+  font-family: "Gotham Pro", sans-serif;
   font-weight: 400;
   background: #232323; }
 
@@ -431,7 +387,7 @@ header {
 
 .codee {
   color: #fff;
-  font-family: "JosefinSans";
+  font-family: "Josefin Sans";
   font-weight: normal;
   font-style: normal; }
   .codee span, .codee b {
@@ -448,11 +404,11 @@ h2 {
   color: #22BBB4;
   text-align: center;
   font-weight: 700;
-  font: "GothamPro";
+  font-family: "Gotham Pro";
   padding-bottom: 1.5rem; }
 
 #logo {
-  font-family: "JosefinSans";
+  font-family: "Josefin Sans";
   color: #fff;
   text-align: center;
   font-size: 32px; }
