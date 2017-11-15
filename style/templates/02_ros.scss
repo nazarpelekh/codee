@@ -1,0 +1,80 @@
+.about_us {
+  background: #ff00ff;
+}
+
+
+div.wpcf7 {
+  .wpcf7-form-control-wrap {
+    display: block !important;
+    //margin-bottom: 20px;
+  }
+  .wpcf7-not-valid-tip {
+    background: #fff;
+    border: 1px solid #FF0000;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    font-family: $font;
+    height: 100%;
+    line-height: 45px;
+    padding: 0 10px;
+  }
+  .wpcf7-response-output {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    font: 400 16px/1.4 $font;
+    color: #fff;
+    padding: rem(7) rem(10);
+    border-radius: 0;
+    text-align: center;
+    &.wpcf7-mail-sent-ng {background: #1091ae; position: relative}
+    &.wpcf7-mail-sent-ok {background: #16a085; position: relative}
+    &.wpcf7-validation-errors, &.wpcf7-spam-blocked {background: #ff5f5f; position: relative}
+  }
+  input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]), textarea {
+    display: block;
+    height: 45px;
+    font: 400 16px $font;
+    color: #fff;
+    padding: 0;
+    border: none;
+    border-bottom: 2px solid #f7f7f7;
+    margin-bottom: 20px;
+    background: transparent;
+    @include placeholder {color: #e9e9e9; opacity: 1}
+  }
+  textarea {
+    @include transition(none);
+    resize: none;
+    overflow: hidden;
+    min-height: 45px;
+    line-height: 45px;
+  }
+  button.button {
+    & + input {display: none}
+  }
+  .ajax-loader {
+    @extend %ani;
+    @include prefixer(animation, swiper-preloader-spin 1s infinite linear);
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 -48px 0 24px;
+    border-radius: 100%;
+    border: 2px solid #f1f1f1;
+    border-top: 3px solid $mars;
+    opacity: 0;
+    visibility: hidden;
+    &.is-active {
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+  .screen-reader-response {display: none}
+}

@@ -1,13 +1,13 @@
 @import '_reset';
 
 html {
-  font-size: $font-base;
+  font: 400 $font-base/1.1 $font;
 }
 
 body {
-  font-family: $font, sans-serif;
-  font-weight: 400;
+  font-size: 16px;
   background: #232323;
+  &.is_overflow {overflow: hidden}
 }
 
 main {
@@ -18,7 +18,7 @@ main {
 header {
   background: #2d2d2d;
   text-align: center;
-  padding: 20px;
+  padding: 12px 3% 9px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -107,46 +107,12 @@ section {
   }
 }
 
-.top-block {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: relative;
-  height: 100vh;
-  display: flex;
-  &:after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background: rgba(0, 0, 0, 0.75);
-    z-index: 0;
-  }
-  .wrap {
-    margin: auto;
-  }
-}
-
-.contact-us {
-  background: linear-gradient(120deg,$mars 25%,#232323 85%);
-  .wrap {
-    width: 600px;
-  }
-  h2 {
-    color: #fff;
-  }
-}
-.contact-us__items {
-  display: flex;
-  justify-content: space-between;
-  .item {
-    flex-basis: 48%;
-  }
-}
 
 footer {
   text-align: center;
   padding: 20px;
 }
+
+
+@import "templates/01_naz";
+@import "templates/02_ros";

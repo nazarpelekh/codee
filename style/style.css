@@ -1,3 +1,10 @@
+div.wpcf7 .ajax-loader {
+  -webkit-transition: all 0.4s ease;
+  -moz-transition: all 0.4s ease;
+  -ms-transition: all 0.4s ease;
+  -o-transition: all 0.4s ease;
+  transition: all 0.4s ease; }
+
 * {
   margin: 0;
   padding: 0;
@@ -144,21 +151,20 @@ input:not([type='submit']) {
     -o-transition: all 0.4s ease;
     transition: all 0.4s ease; }
 
-hr {
-  clear: both;
-  font-size: 0;
-  overflow: hidden;
-  display: block;
-  height: 0; }
+html, body {
+  margin: 0;
+  height: 100%; }
 
-body, html {
+body {
   display: -webkit-box;
   display: -webkit-flex;
+  display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-box-orient: vertical;
   -webkit-flex-direction: column;
+  -moz-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column;
   min-height: 100vh; }
@@ -166,6 +172,8 @@ body, html {
 main {
   -webkit-box-flex: 1;
   -webkit-flex: 1 0 auto;
+  -moz-box-flex: 1;
+  -moz-flex: 1 0 auto;
   -ms-flex: 1 0 auto;
   flex: 1 0 auto; }
 
@@ -174,9 +182,6 @@ footer {
   -webkit-flex: none;
   -ms-flex: none;
   flex: none; }
-
-* html main {
-  height: 100%; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
   display: block; }
@@ -302,75 +307,14 @@ header, .content, footer {
     -o-transform: rotate(45deg) translate(7px, 7px);
     transform: rotate(45deg) translate(7px, 7px); }
 
-div.wpcf7 .wpcf7-form-control-wrap {
-  display: block !important;
-  clear: both; }
-div.wpcf7 .wpcf7-not-valid-tip {
-  background: #fff;
-  border: 1px solid #FF0000;
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  cursor: pointer;
-  font-family: "Gotham Pro";
-  height: 100%;
-  line-height: 45px;
-  padding: 0 10px; }
-div.wpcf7 .wpcf7-response-output {
-  float: left;
-  width: 100%;
-  margin: 10px 0 0 0;
-  font-family: "Gotham Pro";
-  line-height: 20px;
-  padding: 5px 20px;
-  text-align: center; }
-  div.wpcf7 .wpcf7-response-output.wpcf7-validation-errors {
-    background: #FF5F5F;
-    color: #fff; }
-  div.wpcf7 .wpcf7-response-output.wpcf7-mail-sent-ng {
-    background: #1091ae;
-    color: #fff; }
-  div.wpcf7 .wpcf7-response-output.wpcf7-mail-sent-ok {
-    background: #16A085;
-    color: #fff; }
-div.wpcf7 .ajax-loader {
-  display: none; }
-div.wpcf7 input:not([type="submit"]), div.wpcf7 textarea {
-  width: 100%;
-  border: none;
-  border-bottom: 2px solid #f7f7f7;
-  padding: 0 12px;
-  display: block;
-  height: 45px;
-  margin: 0 auto 20px;
-  font: 400 16px "Gotham Pro";
-  background: transparent;
-  color: #fff; }
-  div.wpcf7 input:not([type="submit"])::-webkit-input-placeholder, div.wpcf7 textarea::-webkit-input-placeholder {
-    color: #e9e9e9; }
-  div.wpcf7 input:not([type="submit"]):-moz-placeholder, div.wpcf7 textarea:-moz-placeholder {
-    color: #e9e9e9; }
-  div.wpcf7 input:not([type="submit"])::-moz-placeholder, div.wpcf7 textarea::-moz-placeholder {
-    color: #e9e9e9; }
-  div.wpcf7 input:not([type="submit"]):-ms-input-placeholder, div.wpcf7 textarea:-ms-input-placeholder {
-    color: #e9e9e9; }
-  div.wpcf7 input:not([type="submit"]):focus, div.wpcf7 textarea:focus {
-    background: rgba(8, 97, 149, 0.08); }
-div.wpcf7 textarea {
-  resize: none;
-  overflow: auto;
-  height: 150px;
-  padding: 10px; }
-
 html {
-  font-size: 20px; }
+  font: 400 27.27273px "Gotham Pro", sans-serif; }
 
 body {
-  font-family: "Gotham Pro", sans-serif;
-  font-weight: 400;
+  font-size: 16px;
   background: #232323; }
+  body.is_overflow {
+    overflow: hidden; }
 
 main {
   overflow: hidden;
@@ -379,7 +323,7 @@ main {
 header {
   background: #2d2d2d;
   text-align: center;
-  padding: 20px;
+  padding: 12px 3% 9px;
   position: fixed;
   top: 0;
   width: 100%;
@@ -394,18 +338,18 @@ header {
     color: #22BBB4; }
 
 h1 {
-  font-size: 3.2rem;
+  font-size: 2.13333rem;
   text-align: center;
   position: relative;
   z-index: 1; }
 
 h2 {
-  font-size: 2rem;
+  font-size: 1.33333rem;
   color: #22BBB4;
   text-align: center;
   font-weight: 700;
-  font-family: "Gotham Pro";
-  padding-bottom: 1.5rem; }
+  font-family: "Gotham Pro", sans-serif;
+  padding-bottom: 1rem; }
 
 #logo {
   font-family: "Josefin Sans";
@@ -437,7 +381,7 @@ section {
   color: #f7f7f7;
   min-width: 150px;
   margin: 20px auto 0;
-  font-size: 0.9rem; }
+  font-size: 0.6rem; }
   .button:after {
     position: absolute;
     transition: .3s;
@@ -455,6 +399,10 @@ section {
     .button:hover:after {
       left: -10%;
       width: 120%; }
+
+footer {
+  text-align: center;
+  padding: 20px; }
 
 .top-block {
   background-size: cover;
@@ -488,8 +436,96 @@ section {
   .contact-us__items .item {
     flex-basis: 48%; }
 
-footer {
-  text-align: center;
-  padding: 20px; }
+.about_us {
+  background: #ff00ff; }
+
+div.wpcf7 .wpcf7-form-control-wrap {
+  display: block !important; }
+div.wpcf7 .wpcf7-not-valid-tip {
+  background: #fff;
+  border: 1px solid #FF0000;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  cursor: pointer;
+  font-family: "Gotham Pro", sans-serif;
+  height: 100%;
+  line-height: 45px;
+  padding: 0 10px; }
+div.wpcf7 .wpcf7-response-output {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  font: 400 16px/1.4 "Gotham Pro", sans-serif;
+  color: #fff;
+  padding: 0.23333rem 0.33333rem;
+  border-radius: 0;
+  text-align: center; }
+  div.wpcf7 .wpcf7-response-output.wpcf7-mail-sent-ng {
+    background: #1091ae;
+    position: relative; }
+  div.wpcf7 .wpcf7-response-output.wpcf7-mail-sent-ok {
+    background: #16a085;
+    position: relative; }
+  div.wpcf7 .wpcf7-response-output.wpcf7-validation-errors, div.wpcf7 .wpcf7-response-output.wpcf7-spam-blocked {
+    background: #ff5f5f;
+    position: relative; }
+div.wpcf7 input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]), div.wpcf7 textarea {
+  display: block;
+  height: 45px;
+  font: 400 16px "Gotham Pro", sans-serif;
+  color: #fff;
+  padding: 0;
+  border: none;
+  border-bottom: 2px solid #f7f7f7;
+  margin-bottom: 20px;
+  background: transparent; }
+  div.wpcf7 input:not([type="submit"]):not([type="radio"]):not([type="checkbox"])::-webkit-input-placeholder, div.wpcf7 textarea::-webkit-input-placeholder {
+    color: #e9e9e9;
+    opacity: 1; }
+  div.wpcf7 input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]):-moz-placeholder, div.wpcf7 textarea:-moz-placeholder {
+    color: #e9e9e9;
+    opacity: 1; }
+  div.wpcf7 input:not([type="submit"]):not([type="radio"]):not([type="checkbox"])::-moz-placeholder, div.wpcf7 textarea::-moz-placeholder {
+    color: #e9e9e9;
+    opacity: 1; }
+  div.wpcf7 input:not([type="submit"]):not([type="radio"]):not([type="checkbox"]):-ms-input-placeholder, div.wpcf7 textarea:-ms-input-placeholder {
+    color: #e9e9e9;
+    opacity: 1; }
+div.wpcf7 textarea {
+  -webkit-transition: none 0.4s ease;
+  -moz-transition: none 0.4s ease;
+  -ms-transition: none 0.4s ease;
+  -o-transition: none 0.4s ease;
+  transition: none 0.4s ease;
+  resize: none;
+  overflow: hidden;
+  min-height: 45px;
+  line-height: 45px; }
+div.wpcf7 button.button + input {
+  display: none; }
+div.wpcf7 .ajax-loader {
+  -webkit-animation: swiper-preloader-spin 1s infinite linear;
+  -moz-animation: swiper-preloader-spin 1s infinite linear;
+  -ms-animation: swiper-preloader-spin 1s infinite linear;
+  animation: swiper-preloader-spin 1s infinite linear;
+  width: 24px;
+  height: 24px;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 -48px 0 24px;
+  border-radius: 100%;
+  border: 2px solid #f1f1f1;
+  border-top: 3px solid #22BBB4;
+  opacity: 0;
+  visibility: hidden; }
+  div.wpcf7 .ajax-loader.is-active {
+    opacity: 1;
+    visibility: visible; }
+div.wpcf7 .screen-reader-response {
+  display: none; }
 
 /*# sourceMappingURL=style.css.map */

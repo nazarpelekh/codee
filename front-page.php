@@ -4,6 +4,9 @@
             <h1 class="codee"><span>[</span>code<b class="element" data-words="<?php echo get_field('appears_text') ?>"></b><span>]</span></h1>
         </div>
     </section>
+	<section class="about_us">
+		<h2><?php _e("[:en]About us[:ua]Про нас[:]"); ?></h2>
+	</section>
     <section class="contact-us">
         <div class="wrap">
             <h2><?php _e("[:en]Get in touch[:ua]Зв'яжіться з нами[:]"); ?></h2>

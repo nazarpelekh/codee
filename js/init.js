@@ -17,41 +17,31 @@ $(document).ready(function () {
             $(this).remove();
         });
     });
-
-    /* Swiper Slider */
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        paginationClickable: true,
-        spaceBetween: 10,
-        loop: true
+    $(this).on('focus', '.wpcf7-form-control:not([type="submit"])', function() {
+        $(this).parent().addClass('is_active');
     });
-
-    /* Resize Menu */
-    $(window).bind('resize orientationchange', function () {
-        if ($(window).width() >= 768 ) {
-            $('#menu-main-menu').removeAttr('style');
+    $(this).on('blur', '.wpcf7-form-control:not([type="submit"])', function() {
+        if($(this).val() !== "") {
+            $(this).parent().addClass('is_active');
+        } else {
+            $(this).parent().removeClass('is_active');
         }
     });
-
-    /* Respond Menu */
-    $('#menuOpen').click(function() {
-        $(this).toggleClass('active');
-        $('#mainMenu').toggleClass('active');
-        $('body').css('overflow','hidden');
+    $(this).on( 'keyup', 'textarea', function() {
+        $(this).height( 0 );
+        $(this).height( this.scrollHeight );
     });
+
+
+    $(".nav_icon").click(function() {
+        $(this).toggleClass('is_active').next().stop().toggleClass('is_open');
+        $('body').toggleClass('is_overflow');
+        return false;
+    });
+
     
     if ($("body").width() < 1024) {
-        
-        /* Respond Menu */
-        $("#mainMenu .menu-item-has-children > a").append("<span></span>");
-        $("#mainMenu .menu-item-has-children span").click(function() {
-            $(this).parent().next().slideToggle(300);
-            $(this).toggleClass("active");
-            return false;
-        });
-        
+
         /* turn off hover on mobile view */
         var touch = 'ontouchstart' in document.documentElement
             || navigator.maxTouchPoints > 0
