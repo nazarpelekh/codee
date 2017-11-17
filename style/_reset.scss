@@ -126,7 +126,7 @@ $font-base: 30px;
   box-shadow: $styles;
 }
 
-@mixin transition($property: all, $duration: .4s, $easing: ease) {
+@mixin transition($property: all, $duration: .3s, $easing: ease) {
   -webkit-transition: $property $duration $easing;
   -moz-transition: $property $duration $easing;
   -ms-transition: $property $duration $easing;
@@ -324,7 +324,7 @@ input[type="submit"], input[type="button"] {
 
 ::selection {
   color: #fff;
-  background: #000;;
+  background: #000;
 }
 
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
@@ -666,3 +666,32 @@ $menu_color: #fff;
 
 
 
+
+
+// classes to extend
+.flex {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(space-between);
+}
+.flex_start {
+  @include flexbox;
+  @include align-items(flex-start);
+  @include justify-content(space-between);
+}
+.flex_center {
+  @include flexbox;
+  @include align-items(center);
+  @include justify-content(center);
+}
+
+.bg {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.last_no_padding > *:last-child {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}

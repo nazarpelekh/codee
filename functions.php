@@ -18,6 +18,10 @@ function style_js()
         wp_register_script( 'google-map', "//maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&language=en", '', null );
         wp_enqueue_script( 'google-map' );
     }*/
+
+	if(defined('WPCF7_VERSION')) {
+		wp_deregister_style( 'contact-form-7' );
+	}
     
     if(defined('GOOGLEMAPS')) {
         wp_enqueue_script('googlemaps', '//maps.googleapis.com/maps/api/js?v=3.exp&language=en&key=AIzaSyAO77hGcvxmsvOn1RSjDFQMI4YUnW89MDo', false, null, false);

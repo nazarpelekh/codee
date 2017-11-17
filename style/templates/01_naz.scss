@@ -1,10 +1,8 @@
 .top-block {
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  @extend .bg;
+  @extend .flex_center;
   position: relative;
-  height: 100vh;
-  display: flex;
+  min-height: 100vh;
   &:after {
     content: '';
     position: absolute;
@@ -15,24 +13,5 @@
     background: rgba(0, 0, 0, 0.75);
     z-index: 0;
   }
-  .wrap {
-    margin: auto;
-  }
 }
 
-.contact-us {
-  background: linear-gradient(120deg,$mars 25%,#232323 85%);
-  .wrap {
-    width: 600px;
-  }
-  h2 {
-    color: #fff;
-  }
-}
-.contact-us__items {
-  display: flex;
-  justify-content: space-between;
-  .item {
-    flex-basis: 48%;
-  }
-}

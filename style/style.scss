@@ -23,6 +23,20 @@ header {
   top: 0;
   width: 100%;
   z-index: 1000;
+  .language-chooser {
+    @include center(false, true);
+    left: 0;
+    li {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 3px;
+      &.lang-en a:after {content: 'EN'}
+      &.lang-ua a:after {content: 'UA'}
+      &.active a {box-shadow: 0 2px $mars}
+      a :after {color: #fff}
+      span {font-size: 0}
+    }
+  }
 }
 
 .codee {
@@ -71,30 +85,30 @@ section {
 }
 
 .button {
-  display: block;
-  padding: 10px 20px;
-  border: 2px solid #f7f7f7;
-  text-align: center;
-  text-transform: uppercase;
-  position: relative;
-  overflow:hidden;
-  transition: .3s;
-  cursor: pointer;
-  background: transparent;
+  @extend %ani;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
   color: #f7f7f7;
-  min-width: 150px;
-  margin: 20px auto 0;
-  font-size: rem(18);
+  letter-spacing: 0.05em;
+  min-width: 120px;
+  padding: 8px 20px;
+  border: 2px solid #f7f7f7;
+  background: transparent;
+  text-align: center;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
   &:after {
-    position: absolute;
-    transition: .3s;
+    @extend %ani;
     content: '';
+    position: absolute;
     width: 0;
     bottom: 0;
     background: #f7f7f7;
     height: 100%;
     left: -10%;
-    transform: skewX(15deg);
+    @include transform(skewX(30deg));
     z-index: -1;
   }
   &:hover {
@@ -110,7 +124,7 @@ section {
 
 footer {
   text-align: center;
-  padding: 20px;
+  padding: 15px 3%;
 }
 
 
