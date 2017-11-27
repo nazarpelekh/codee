@@ -5,7 +5,25 @@
         </div>
     </section>
 	<section class="about_us">
-		<h2><?php _e("[:en]About us[:ua]Про нас[:]"); ?></h2>
+		<div class="wrap">
+			<h2><?php _e("[:en]About us[:ua]Про нас[:]"); ?></h2>
+			<div class="about_cols flex_center">
+				<div class="about_col">
+					<figure class="i-wp"></figure>
+					<div><?php the_field( 'wp_desc' ); ?></div>
+				</div>
+				<div class="about_col">
+					<figure class="i-ui"></figure>
+					<div><?php the_field( 'ui_desc' ); ?></div>
+				</div>
+				<div class="about_col">
+					<figure class="i-skills"></figure>
+					<div><?php the_field( 'skills_desc' ); ?></div>
+				</div>
+			</div>
+			<div class="about_info"></div>
+			<div class="about_general_info"><?php the_content(); ?></div>
+		</div>
 	</section>
     <section class="contact-us">
         <div class="wrap">

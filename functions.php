@@ -29,6 +29,7 @@ function style_js()
 
     wp_enqueue_script('lib', get_template_directory_uri() . '/js/lib.js', array('jquery'), '1.0', true);
 	wp_enqueue_script('init', get_template_directory_uri() . '/js/init.js', array('jquery'), '1.0', true);
+	wp_enqueue_script('ros', get_template_directory_uri() . '/js/ros.js', array('jquery'), '1.0', true);
     /*    wp_enqueue_style('swiper.min', get_template_directory_uri() . '/style/swiper.min.css');*/
     wp_enqueue_style('style', get_template_directory_uri() . '/style/style.css');
 

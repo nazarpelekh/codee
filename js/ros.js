@@ -5,6 +5,20 @@
 $(document).ready(function() {
     'use strict';
 
-    
+    $('.about_info').html($('.about_general_info').html());
+
+    $('.about_col figure').on('click', function () {
+        var t = $(this),
+            st = t.next().html(),
+            ct = $('.about_general_info').html();
+        if(t.hasClass('is_active')) {
+            $('.about_col figure').removeClass('is_active');
+            $('.about_info').html(ct).toggleClass('is_changing');
+        } else {
+            $('.about_col figure').removeClass('is_active');
+            t.addClass('is_active');
+            $('.about_info').html(st).toggleClass('is_changing');
+        }
+    });
 
 });

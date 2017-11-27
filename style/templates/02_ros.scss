@@ -1,4 +1,27 @@
-.about_us {}
+.about_cols {margin: rem(45) -7% rem(75)}
+.about_col {
+  margin: 0 7%;
+  figure {
+    @extend %ani;
+    font-size: 70px;
+    line-height: 0;
+    color: $mars;
+    cursor: pointer;
+    &.is_active {text-shadow: 0 0 30px #fff}
+  }
+  @include screen-min(768) {
+    > div {display: none}
+  }
+}
+.about_info {
+  @extend %ani;
+  width: 600px;
+  color: #fff;
+  margin: 0 auto;
+  text-align: center;
+  &.is_changing {@include transform(rotateY(360deg))}
+}
+.about_general_info {display: none}
 
 
 .contact-us {
