@@ -141,3 +141,16 @@ div.wpcf7 {
 @keyframes ajax-loader-spin {
   100% { transform: rotate(360deg) }
 }
+
+.codee_dev {
+  span {
+    display: inline-block;
+    @include transition(all, 0.15s, ease-in-out);
+  }
+  &:hover {
+    span {
+      &:first-child {@include transform(translateX(-3px))}
+      &:last-child {@include transform(translateX(3px))}
+    }
+  }
+}

@@ -15,8 +15,8 @@
 <main>
     <header>
         <div class="wrap">
-            <a id="logo" class="codee" href="<?php echo get_option('home') ?>">
-                <span>[</span>codee<span>]</span>
+            <a id="logo" class="codee codee_dev" href="<?php echo get_option('home') ?>">
+                <span>[</span>code<span>e</span><span>]</span>
             </a>
 	        <?php echo qtranxf_generateLanguageSelectCode('text'); ?>
         </div>
